@@ -4,12 +4,12 @@ pipeline {
    stages {
       stage('Build') {
          steps {
-            sh label: '', script: './gradlew assembleDebug '
+            sh label: '', script: './gradlew assembleRelease'
          }
       }
       stage('Running Unit Test') {
          steps {
-            sh label: '', script: './gradlew test '
+            sh label: '', script: './gradlew test'
          }
       }
       stage('Running Sonar Analysis') {
