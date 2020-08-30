@@ -12,5 +12,10 @@ pipeline {
             sh label: '', script: './gradlew test '
          }
       }
+      stage('Running Sonar Analysis') {
+         steps {
+            sh label: '', script: './gradlew sonarqube'
+         }
+      }
    }
 }
