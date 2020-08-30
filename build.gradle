@@ -8,6 +8,18 @@ buildscript {
   }
 }
 
+plugins {
+  id "org.sonarqube" version "3.0"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "kul-unisys_sample-android-app"
+    property "sonar.organization", "kul-unisys"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
+
 allprojects {
   repositories {
     jcenter()
