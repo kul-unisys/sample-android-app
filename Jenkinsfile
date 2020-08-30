@@ -20,6 +20,7 @@ pipeline {
       stage('Running OWASP DC Analysis') {
          steps {
             sh label: '', script: './gradlew dependencyCheckAnalyze'
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'build/reports/dependency-check-report.html', reportName: 'OWASP Dependency Check Report', reportTitles: ''])
          }
       }
    }
