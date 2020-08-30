@@ -17,5 +17,10 @@ pipeline {
             sh label: '', script: './gradlew sonarqube'
          }
       }
+      stage('Running OWASP DC Analysis') {
+         steps {
+            sh label: '', script: './gradlew dependencyCheckAnalyze'
+         }
+      }
    }
 }
