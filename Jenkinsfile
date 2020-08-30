@@ -7,5 +7,10 @@ pipeline {
             sh label: '', script: './gradlew assembleDebug '
          }
       }
+      stage('Running Unit Test') {
+         steps {
+            sh label: '', script: './gradlew test '
+         }
+      }
    }
 }
