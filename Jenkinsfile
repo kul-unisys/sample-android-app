@@ -1,12 +1,11 @@
-// Powered by Infostretch 
+pipeline {
+   agent any
 
-timestamps {
-
-  node () {
-    stage ('Build') {
-      sh """ 
-        ./gradlew assembleDebug 
-      """ 
-  	}
-  }
+   stages {
+      stage('Build') {
+         steps {
+            sh label: '', script: './gradlew assembleDebug '
+         }
+      }
+   }
 }
