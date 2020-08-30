@@ -10,9 +10,10 @@ buildscript {
   }
 }
 
+apply plugin: 'org.owasp.dependencycheck'
+
 plugins {
   id "org.sonarqube" version "3.0"
-  id "org.owasp.dependencycheck"
 }
 
 sonarqube {
